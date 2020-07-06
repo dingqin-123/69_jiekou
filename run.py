@@ -7,7 +7,7 @@ from practice01.R_W_excel import read_data
 from practice01.http_request import http_request
 from practice01.R_W_excel import write_data
 import sys, io
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="gb18030")
 
 
 Token=None  #全局变量，初始值设置为None
