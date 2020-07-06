@@ -6,7 +6,8 @@
 from practice01.R_W_excel import read_data
 from practice01.http_request import http_request
 from practice01.R_W_excel import write_data
-
+import sys, io
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="gb18030")
 
 
 Token=None  #全局变量，初始值设置为None
@@ -36,5 +37,5 @@ def run(file_name,sheet_name,col_actual,col_result):       #行是跟着id走的
             write_data(file_name,sheet_name, test_data[0]+1,col_result,'FAIL')
 
 run('test_case.xlsx','recharge',8,9)
-run('test_case.xlsx','login',8,9)
+
 
